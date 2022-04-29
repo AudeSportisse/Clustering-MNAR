@@ -1,6 +1,15 @@
 library('ExtDist')
 
 SimuC_miss <- function(pik,Y,Z,probmiss_z=NULL,opt="probit"){
+   #######Arguments
+  ##pik: vector of size K, proportion of the K classes
+  ##Y: complete data matrix of size (n,d)
+  ##Z: matrix of size (n,K) for the partition
+  ##probiss_z: parameters for the missing-data mechanism, related to the class membership
+  ##opt: link for the missing-data mechanism, probit, logit or Laplace
+  #######Values
+  ##Return an imcomplete data matrix by introducing missing values with the mechanism mecha
+  
   if(is.null(probmiss_z)){
     return("error: no parameter for the mechanism is given.")
   }
